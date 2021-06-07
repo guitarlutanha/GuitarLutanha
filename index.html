@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guitar</title>
+    <link rel="stylesheet" type="text/css" href="styles/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/Animation.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script>
+        window.onscroll = function () {
+            scrollFunction(),
+                backTop()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+                $(document).ready(function () {
+                    $(".top_bar").hide('slow');
+                });
+
+            } else {
+                $(document).ready(function () {
+                    $(".top_bar").show();
+                });
+            }
+        }
+
+        $(function () {
+            $("#tabs").tabs();
+        });
+
+        $(document).ready(function () {
+            $(".search__item").click(function () {
+                $(".input_search").toggle("slow");
+            });
+        })
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="top_bar">
+            <div class="bar__info">
+                <div class="phone">+84 726 316</div>
+                <div class="social">
+                    <ul class="social_list">
+                        <li class="social_list_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social_list_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social_list_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="bar__user">
+                <div class="bar__user-login"><a href="#">login</a></div>
+                <div class="bar__user-regis"><a href="#">register</a></div>
+            </div>
+        </div>
+
+        <div class="main_nav">
+            <div class="main_nav__logo"><a href="#"><img src="styles/images/logo.png"style="width:94px;height: auto; alt="logo" > </a></div>
+            <div class="main_nav__menu">
+                <ul class="main_nav__list">
+                    <li class="main_nav__item"><a href="./index.html">TRANG CHỦ</a></li>
+                    <li class="main_nav__item"><a href="./about.html">GIỚI THIỆU</a></li>
+                    <li class="main_nav__item"><a href="./offers.html">ƯU ĐÃI</a></li>
+                    <li class="main_nav__item"><a href="./blog.html">TIN TỨC</a></li>
+                    <li class="main_nav__item"><a href="./contact.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div class="main_nav__search">
+                <form action=""><input class="input_search" type="text"></form>
+                <div class="search__item"><i class="fas fa-search"></i></div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <!--slider-->
+        <div class="main__slide">
+            <div class="home_slide__item">
+                <div class="home_slide__background"
+                     style="background-image: url(styles/images/anh1.jpg)"></div>
+                <div class="home_slider__content">
+                    <div class="home_slider_content_inner animated bounceInLeft">
+                        <h1>Taylor  </h1>
+                        <h1>114E</h1>
+                        <div class="button home_slider__button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_slide__item">
+                <div class="home_slide__background"
+                     style="background-image: url(styles/images/anh2.jpg)"></div>
+                <div class="home_slider__content">
+                    <div class="home_slider_content_inner animated bounceInRight">
+                        <h1>Takamine  </h1>
+                        <h1>GD51CE</h1>
+                        <div class="button home_slider__button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_slide__item">
+                <div class="home_slide__background"
+                     style="background-image: url(styles/images/anh3.jpg)"></div>
+                <div class="home_slider__content">
+                    <div class="home_slider_content_inner animated bounceInDown">
+                        <h1>Fender </h1>
+                        <h1>CD-140SCE</h1>
+                        <div class="button home_slider__button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_slide__nav nav__prev"><i onclick="plusSlides(-1)" class="fas fa-chevron-circle-left"></i>
+            </div>
+            <div class="main_slide__nav nav__next"><i onclick="plusSlides(1)"
+                                                      class="fas fa-chevron-circle-right"></i></i>
+            </div>
+            
+            <div class="main_slide__dots">
+                <ul class="customs_dots">
+                    <li class="customs_dot active" onclick="currentSlide(1)">01.</li>
+                    <li class="customs_dot" onclick="currentSlide(2)">02.</li>
+                    <li class="customs_dot" onclick="currentSlide(3)">03.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main_search">
+
+            <div id="tabs" class="main_search__tabs">
+                <ul class="search_tabs__list">
+                    <li class="search_tabs__item"><a href="#tabs-1"><i
+                            class="fas fa-guitar"></i><span>Taylor</span></a>
+                    </li>
+                    <li class="search_tabs__item"><a href="#tabs-2"><i
+                            class="fas fa-guitar"></i><span>TAKAMINE</span></a>
+                    </li>
+                    <li class="search_tabs__item"><a href="#tabs-3"><i class="fas fa-guitar"></i><span>FENDER</span></a>
+                    </li>
+                    <li class="search_tabs__item"><a href="#tabs-4"><i
+                            class="fas fa-guitar"></i><span>TANGLEWOOD</span></a>
+                    </li>
+                    <li class="search_tabs__item"><a href="#tabs-5"><i
+                            class="fas fa-guitar"></i><span>SUZUKI</span></a>
+                    </li>
+                    <li class="search_tabs__item"><a href="#tabs-6"><i class="fas fa-guitar"></i><span>GREG BENNETT</span></a>
+                    </li>
+                </ul>
+                <!-- <style>
+                    .search_tabs__item:hover{
+                      color: #FFffff;
+                      background: red;
+                }
+                </style> -->
+                <div id="tabs-1" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá tiền</div>
+                            <select name="children" class="search_content__input">
+                                <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+                <div id="tabs-2" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá tiền</div>
+                            <select name="children" class="search_content__input">
+                                <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+                <div id="tabs-3" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá tiền</div>
+                            <select name="children" class="search_content__input">
+                                <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+                <div id="tabs-4" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá Tiền</div>
+                            <select name="children" class="search_content__input">
+                                <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+                <div id="tabs-5" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá Tiền</div>
+                            <select name="children" class="search_content__input">
+                                 <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+                <div id="tabs-6" class="tabs_content animated fadeIn">
+                    <form action="" class="search_content">
+                        <div class="search_content__item">
+                            <div>Tên đàn</div>
+                            <input type="text" class="search_content__input" placeholder="Nhập tên đàn">
+                        </div>
+                        <div class="search_content__item">
+                            <div>Tính năng</div>
+                            <select name="adults" class="search_content__input">
+                                <option> Chuyên nghiệp</option>
+                                <option>Biểu diễn</option>
+                                <option>Mới chơi</option>
+                            </select>
+                        </div>
+                        <div class="search_content__item">
+                            <div>Giá Tiền</div>
+                            <select name="children" class="search_content__input">
+                                <option>Dưới 1 triệu</option>
+                                <option>1 triệu đến 3 triệu</option>
+                                <option>3 triệu đến 5 triệu</option>
+                                <option>5 triệu đến 10 triệu</option>
+                            </select>
+                        </div>
+                        <button class="button search_content__button">Tìm kiếm <span></span><span></span><span></span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!--        Intro-->
+        <div class="main_intro">
+            <h2>Những cây đàn guitar tốt nhất</h2>
+            <p>Đây là những guitar nhất hiện nay của chúng tôi.</p>
+            <p>Sẽ làm bạn hài lòng khi mua hàng tại đây.</p>
+            <div class="main_intro__items">
+                <div class="intro_item">
+                    <div class="intro_item__backgroud" style="background-image: url(styles/images/anh1.jpg)"></div>
+                    <div class="intro_item__content">
+                        <div class="intro_date">Từ 01/05 - 30/05</div>
+                        <div class="intro_text">
+                            <h1>Taylor 114E</h1>
+                            <div class="intro_price">Giá: 5,500,000đ</div>
+                            <div class="rating rating_4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="button intro_button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+                <div class="intro_item">
+                    <div class="intro_item__backgroud" style="background-image: url(styles/images/anh2.jpg)"></div>
+                    <div class="intro_item__content">
+                        <div class="intro_date">Từ 15/04 - 15/05</div>
+                        <div class="intro_text">
+                            <h1>Takamine GD51CE</h1>
+                            <div class="intro_price">Giá: 9,130,000đ</div>
+                            <div class="rating rating_4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="button intro_button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+                <div class="intro_item">
+                    <div class="intro_item__backgroud" style="background-image: url(styles/images/anh3.jpg)"></div>
+                    <div class="intro_item__content">
+                        <div class="intro_date">Từ 15/04 - 15/05</div>
+                        <div class="intro_text">
+                            <h1>Fender CD-140SCE</h1>
+                            <div class="intro_price">Giá: 3,200,000đ</div>
+                            <div class="rating rating_4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="button intro_button">
+                            <div class="button_bcg"></div>
+                            <a href="#">Xem ngay<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        CTA-->
+       
+        <!--        Offers-->
+        <div class="main_offers">
+            <div class="box main_offers__box">
+                <h2 class="offers_title">Các ưu đãi tốt nhất</h2>
+                <div class="offers_items">
+                    <div class="offers_item">
+                        <div class="offers_image">
+                            <div class="offers_image_background"
+                                 style="background-image: url(styles/images/taylor.jpg)"></div>
+                            <div class="offers_name"><a href="#">Taylor 114E</a></div>
+                        </div>
+                        <div class="offers_content">
+                            <div class="offers_price">19,850,000đ</div>
+                            <div class="rating rating_4 offers_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="offers_text">Đàn guitar Taylor 114E là một dòng sản phẩm acoustic thuộc dòng series 1 của taylor với thiết kế độc đáo đó chính là khớp nối cần đàn và sử dụng gỗ sitka spruce tạo âm thanh vô cùng trong trẻo, sống động, giúp người chơi có thể cảm nhận được tốt hơn và đây cũng là ưu điểm nổi bật tạo lên sự thành công cho thương hiệu Taylor..</p>
+                            <div class="offers_icons">
+                                <ul class="offers_icons_list">
+                                    <li class="offers_icons_item"><img src="styles/images/post.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/compass.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/bicycle.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/sailboat.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                        </div>
+                    </div>
+                    <div class="offers_item">
+                        <div class="offers_image">
+                            <div class="offers_image_background"
+                                 style="background-image: url(styles/images/Takamine.jpg)"></div>
+                            <div class="offers_name"><a href="#">Takamine D2D</a></div>
+                        </div>
+                        <div class="offers_content">
+                            <div class="offers_price">4,200,500đ</div>
+                            <div class="rating rating_4 offers_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="offers_text">Đàn guitar TAKAMINE D2D có dáng Dreadnought. Thùng đàn lớn cho tiếng đàn to, ấm và đầy hơn, phù hợp cho các bạn chơi đệm và dùng pick. Kiểu dáng dreadnought của cây đàn đang được dân chơi nhạc rất ưa chuộng.
+
+Chắc hẳn, đây sẽ là cây đàn lý tưởng để người chơi có thể dùng để đệm hát cực kỳ hiệu quả.</p>
+                            <div class="offers_icons">
+                                <ul class="offers_icons_list">
+                                    <li class="offers_icons_item"><img src="styles/images/post.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/compass.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/bicycle.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/sailboat.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                        </div>
+                    </div>
+                    <div class="offers_item">
+                        <div class="offers_image">
+                            <div class="offers_image_background"
+                                 style="background-image: url(styles/images/SUZUKI.jpg)"></div>
+                            <div class="offers_name"><a href="#">SUZUKI SDG</a></div>
+                        </div>
+                        <div class="offers_content">
+                            <div class="offers_price">2,500,000đ</div>
+                            <div class="rating rating_4 offers_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="offers_text"> Đàn guitar Suzuki SDG-6PK/NL là một cây đàn guitar Acoustic mang kiểu dáng hiện đại, thiết kế chuẩn, thùng đàn lớn cho âm thanh thoát ra ngoài đầy đặn nhưng vẫn giữ được độ ấm của một cây đàn guitar đệm hát. Chắc hẳn, đây sẽ là sự lựa chọn cho người mới bắt đầu chơi đàn guitar hoặc sử dụng trong các buổi sinh hoạt."</p>
+                            <div class="offers_icons">
+                                <ul class="offers_icons_list">
+                                    <li class="offers_icons_item"><img src="styles/images/post.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/compass.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/bicycle.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/sailboat.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                        </div>
+                    </div>
+                    <div class="offers_item">
+                        <div class="offers_image">
+                            <div class="offers_image_background"
+                                 style="background-image: url(styles/images/TANGLEWOOD.jpg)"></div>
+                            <div class="offers_name"><a href="#">Tanglewood TWCR O CROSSROADS</a></div>
+                        </div>
+                        <div class="offers_content">
+                            <div class="offers_price">3,040,000đ</div>
+                            <div class="rating rating_4 offers_rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="offers_text">MÔ TẢ SẢN PHẨM
+THÔNG SỐ KỸ THUẬT
+Đàn guitar Tanglewood TWCR O CROSSROADS là một cây đàn guitar acoustic, được chế tạo chủ yếu từ gỗ Mahogany cho âm thanh truyền tải tốt và thiết kế đẹp thích hợp với nhiều người sử dụng kể cả người mới học cho đến người chơi chuyên nghiệp.</p>
+                            <div class="offers_icons">
+                                <ul class="offers_icons_list">
+                                    <li class="offers_icons_item"><img src="styles/images/post.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/compass.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/bicycle.png" alt=""></li>
+                                    <li class="offers_icons_item"><img src="styles/images/sailboat.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        testmonials-->
+        <div class="main_testimonials">
+            <div class="box main_testimonials__box">
+                <h2>Khách hàng nói gì về chúng tôi?</h2>
+                <div id="testimonials" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+                    <div>
+                        <div class="test_item">
+                            <div class="test_item_box">
+                                <div class="test_image"><img src="styles/images/tam.jpg" alt="">
+                                </div>
+                                <div class="test_icon"><img src="styles/images/island_t.png" alt=""></div>
+                                <div class="test_content_container">
+                                    <div class="test_content">
+                                        
+                                        <div class="test_quote_title">" - Tâm ngok - "</div>
+                                        <p class="test_quote_text">Đàn như cc</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="test_item">
+                            <div class="test_item_box">
+                                <div class="test_image"><img src="styles/images/khanh.jpg" alt="">
+                                </div>
+                                <div class="test_icon"><img src="styles/images/island_t.png" alt=""></div>
+                                <div class="test_content_container">
+                                    <div class="test_content">
+                                        
+                                        <div class="test_quote_title">" - Khánh W -  "</div>
+                                        <p class="test_quote_text">Đàn đẹp giá cả hợp lí.Lần sau sẽ mua tiếp</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="test_item">
+                            <div class="test_item_box">
+                                <div class="test_image"><img src="styles/images/khiem2.jpg" alt="">
+                                </div>
+                                <div class="test_icon"><img src="styles/images/island_t.png" alt=""></div>
+                                <div class="test_content_container">
+                                    <div class="test_content">
+                                        
+                                        <div class="test_quote_title">" -Khiem- "</div>
+                                        <p class="test_quote_text">Đàn Tanglewood âm thanh rất tốt</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="test_item">
+                            <div class="test_item_box">
+                                <div class="test_image"><img src="styles/images/test.jpg" alt="">
+                                </div>
+                                <div class="test_icon"><img src="styles/images/island_t.png" alt=""></div>
+                                <div class="test_content_container">
+                                    <div class="test_content">
+                                        <div class="test_item_info">
+                                            <div class="test_name">Hoàng Yến Chibi</div>
+                                            <div class="test_date">12-04-2019</div>
+                                        </div>
+                                        <div class="test_quote_title">" Kỳ nghỉ thật tuyệt !!! "</div>
+                                        <p class="test_quote_text">Các thắng cảnh thật đẹp, khiến tôi không thể quên
+                                            được. Tôi rất hài lòng về dịch cụ của ViVuViet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Hotel-->
+        <div class="main_hotel">
+            <div class="box main_hotel__box">
+                <h2 class="main_hotel_title">Những cây đàn guitar được mua nhiều nhất</h2>
+                <div class="hotel_items">
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich1.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">TAYLOR GSMINI W/ES-2</a></div>
+                            <div class="hotel_price">3,000,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich2.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">TAYLOR 210E</a></div>
+                            <div class="hotel_price">2,540,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich3.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Takamine D2D</a></div>
+                            <div class="hotel_price">4,200,500đ</div>
+                            <div class="hotel_location">Đà nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich4.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Takamine GN15CE NAT</a></div>
+                            <div class="hotel_price">1,400,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich5.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Takamine GN20 NS</a></div>
+                            <div class="hotel_price">5,760,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich6.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Fender CD60SCE NAT</a></div>
+                            <div class="hotel_price">8,700,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich7.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Tanglewood TW5</a></div>
+                            <div class="hotel_price">7,420,00đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                    <div class="hotel_item">
+                        <div class="hotel_image">
+                            <img src="styles/images/thich8.jpg" alt="">
+                        </div>
+                        <div class="hotel_content">
+                            <div class="hotel_title"><a href="#">Suzuki SNG 6NL</a></div>
+                            <div class="hotel_price">1,880,000đ</div>
+                            <div class="hotel_location">Đà Nẵng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="box footer__box">
+            <div class="footer__about">
+                <div class="footer__logo">
+                    <div class="logo">
+                        <a href="#"><img src="styles/images/logo.png" style="width:94px;height: auto; alt="logo"></a>
+                    </div>
+                </div>
+                <p class="footer_about__text">
+                    LUTANHA là một shop bán đàn guitar đảm bảo uy tín chất lượng hàng đầu tại Đà Nẵng
+                </p>
+                <ul class="footer_social_list">
+                    <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="footer_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__blog">
+                <div class="footer_title">bản tin</div>
+                <div class="footer_blog__item">
+                    <div class="footer_blog__image"></div>
+                    <div class="footer_blog__content">
+                        <div class="footer_blog__title"><a href="#">[HOT]Siêu sales mừng ngày quốc tế thiếu nhi</a></div>
+                        <div class="footer_blog__date">25/05/2021</div>
+                    </div>
+                </div>
+                <div class="footer_blog__item">
+                    <div class="footer_blog__image"></div>
+                    <div class="footer_blog__content">
+                        <div class="footer_blog__title"><a href="#">Lý do tại sao nên mua đàn guitar tại LUTANHA</a></div>
+                        <div class="footer_blog__date">20/05/2021</div>
+                    </div>
+                </div>
+                <div class="footer_blog__item">
+                    <div class="footer_blog__image"></div>
+                    <div class="footer_blog__content">
+                        <div class="footer_blog__title"><a href="#">Đàn guitar của Kurt Cobain ước tính bán 1 triệu USD</a></div>
+                        <div class="footer_blog__date">18/05/2021</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__tags">
+                <div class="footer_title">Tags</div>
+                <ul class="tags_list">
+                    <li class="tags_item"><a href="#">Trang Chủ</a></li>
+                    <li class="tags_item"><a href="#">Giới Thiệu</a></li>
+                    <li class="tags_item"><a href="#">Ưu Đãi</a></li>
+                    <li class="tags_item"><a href="#">Tin Tức</a></li>
+                    <li class="tags_item"><a href="#">Liên Hệ</a></li>
+            </div>
+            <div class="footer__contact">
+                <div class="footer_title">Liên hệ</div>
+                <ul class="contact_list">
+                    <li class="contact_item">
+                        <div class="contact_icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact_text">K18/10 Phan Tứ, Mỹ An, Ngũ Hành Sơn, Đà Nẵng</div>
+                    </li>
+                    <li class="contact_item">
+                        <div class="contact_icon"><i class="fas fa-phone-square"></i></div>
+                        <div class="contact_text">+84 726 316 </div>
+                    </li>
+                    <li class="contact_item">
+                        <div class="contact_icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact_text">quangluan1702@gmail.com</div>
+                    </li>
+                    <li class="contact_item">
+                        <div class="col-sm-6 col-lg-2">
+                              <h4 class="adderess_text">Đóng góp ý kiến</h4>
+                        <div class="form-group">
+                        <input type="text" class="enter_email" placeholder="Nội dung" name="Name">
+                    <button class="subscribr_bt">Gửi</button>
+                       </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+<script src="styles/js/main_js.js"></script>
+<script>
+
+    $("#single_item").slick({
+        dots: true
+    });
+    $("#testimonials").slick({
+        dots: false
+    });
+</script>
+
+</html>
